@@ -301,7 +301,7 @@ if command -v brew >/dev/null 2>&1; then
   $SKIP_BROWSERS && brew_bundle_env+=("HOMEBREW_DOTFILES_SKIP_BROWSERS=1")
   $SKIP_COMMUNICATION_KNOWLEDGE && brew_bundle_env+=("HOMEBREW_DOTFILES_SKIP_COMMUNICATION_KNOWLEDGE=1")
   $SKIP_SECURITY_NETWORKING && brew_bundle_env+=("HOMEBREW_DOTFILES_SKIP_SECURITY_NETWORKING=1")
-  run env "${brew_bundle_env[@]}" brew bundle --file "${REPO_DIR}/Brewfile"
+  run env ${brew_bundle_env[@]+"${brew_bundle_env[@]}"} brew bundle --file "${REPO_DIR}/Brewfile"
 fi
 
 link_path "${REPO_DIR}/.zshrc" "${HOME}/.zshrc"

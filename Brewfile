@@ -52,8 +52,6 @@ brew "tree-sitter-cli"
 
 # Coding agents managed by Homebrew
 unless ENV["HOMEBREW_DOTFILES_SKIP_AGENTS"] == "1"
-  tap "anomalyco/tap"
   cask "claude-code"
   cask "codex"
-  brew "anomalyco/tap/opencode"
 end
