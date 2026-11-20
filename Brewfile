@@ -4,6 +4,7 @@ cask_args appdir: "/Applications"
 unless ENV["HOMEBREW_DOTFILES_SKIP_BROWSERS"] == "1"
   cask "google-chrome"
   cask "firefox"
+  brew "agent-browser"
 end
 
 # Communication and knowledge
@@ -18,6 +19,7 @@ unless ENV["HOMEBREW_DOTFILES_SKIP_SECURITY_NETWORKING"] == "1"
   cask "1password"
   cask "1password-cli"
   cask "outline-manager"
+  cask "tailscale"
 end
 
 # Terminal and editor
