@@ -66,3 +66,4 @@ function chpwd() {
     emulate -L zsh
     ls -a
 }
+source /Users/brandoncook/.config/op/plugins.sh
